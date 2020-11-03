@@ -22,8 +22,10 @@ TOKEN=my_personal_access_token HOST=https://gitlab.com lab-changelog
 
 
 <!-- toc -->
+* [Installation](#installation)
 * [Usage](#usage)
 * [Commands](#commands)
+* [Development](#development)
 <!-- tocstop -->
 # Usage
 <!-- usage -->
@@ -32,7 +34,7 @@ $ npm install -g lab-changelog
 $ lab-changelog COMMAND
 running command...
 $ lab-changelog (-v|--version|version)
-lab-changelog/0.0.0 darwin-x64 node-v14.8.0
+lab-changelog/1.0.0 darwin-x64 node-v14.8.0
 $ lab-changelog --help [COMMAND]
 USAGE
   $ lab-changelog COMMAND
@@ -63,7 +65,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3
 
 ## `lab-changelog mr PROJECT`
 
-Get a list of merge reuests that have been merges closed since latest release
+Get a list of merge requests that have been closed since latest tag
 
 ```
 USAGE
@@ -80,7 +82,7 @@ EXAMPLES
   mr api --target dev --output md
 ```
 
-_See code: [src/commands/mr.ts](https://github.com/arelstone/gitlab-mr-changelog/blob/v0.0.0/src/commands/mr.ts)_
+_See code: [src/commands/mr.ts](https://github.com/arelstone/gitlab-mr-changelog/blob/v1.0.0/src/commands/mr.ts)_
 <!-- commandsstop -->
 
 

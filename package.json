@@ -1,7 +1,7 @@
 {
   "name": "lab-changelog",
   "description": "Ever needed to generate a changlog of what has been merged since the latest tag? No need to look further. This tool will help you.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Carsten Daurehøj <arelstone@gmail.com>",
   "bin": {
     "lab-changelog": "./bin/run"
