@@ -14,6 +14,6 @@ export const allProjects = async () => {
 
     cli.action.stop();
 
-    return projects.filter((project: any) => project.path_with_namespace.startsWith('ordrestyring'));
+    return projects;
 };
 /* eslint-enable indent */
