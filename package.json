@@ -1,12 +1,12 @@
 {
-  "name": "os-changelog",
-  "description": "Changelog generator for Ordrestyring",
+  "name": "lab-changelog",
+  "description": "Ever needed to generate a changlog of what has been merged since the latest tag? No need to look further. This tool will help you.",
   "version": "0.0.0",
   "author": "Carsten Daurehøj <arelstone@gmail.com>",
   "bin": {
-    "os-changelog": "./bin/run"
+    "lab-changelog": "./bin/run"
   },
-  "bugs": "https://github.com/Projects/os-changelog/issues",
+  "bugs": "https://github.com/arelstone/gitlab-mr-changelog/issues",
   "dependencies": {
     "@gitbeaker/node": "^25.2.0",
     "@oclif/command": "^1.8.0",
@@ -44,7 +44,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/Projects/os-changelog",
+  "homepage": "https://github.com/arelstone/gitlab-mr-changelog",
   "keywords": [
     "oclif"
   ],
@@ -52,12 +52,12 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "os-changelog",
+    "bin": "lab-changelog",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "Projects/os-changelog",
+  "repository": "arelstone/gitlab-mr-changelog",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",

@@ -1,6 +1,6 @@
 import { Projects } from '@gitbeaker/node';
 import cli from 'cli-ux';
-import Config from '../utils/config';
+import Config from './config';
 
 /* eslint-disable indent */
 export const allProjects = async () => {

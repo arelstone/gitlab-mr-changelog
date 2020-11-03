@@ -1,12 +1,25 @@
-os-changelog
+lab-changelog
 ============
 
-Changelog generator for Ordrestyring
+Ever needed to generate a changlog of what has been merged since the latest tag? No need to look further. This tool will help you.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/os-changelog.svg)](https://npmjs.org/package/os-changelog)
-[![Downloads/week](https://img.shields.io/npm/dw/os-changelog.svg)](https://npmjs.org/package/os-changelog)
-[![License](https://img.shields.io/npm/l/os-changelog.svg)](https://github.com/Projects/os-changelog/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/lab-changelog.svg)](https://npmjs.org/package/lab-changelog)
+[![Downloads/week](https://img.shields.io/npm/dw/lab-changelog.svg)](https://npmjs.org/package/lab-changelog)
+[![License](https://img.shields.io/npm/l/lab-changelog.svg)](https://github.com/arelstone/gitlab-mr-changelog/blob/master/package.json)
+
+# Installation
+```sh-session
+npm install (-g) lab-changelog
+```
+Under the hood we need the *host* of your gitlab installation and a *personal access token*. To inject these add them as ENV variables.
+
+The personal access token can be created from your profile in gitlab
+
+```sh-session
+TOKEN=my_personal_access_token HOST=https://gitlab.com lab-changelog
+```
+
 
 <!-- toc -->
 * [Usage](#usage)
@@ -15,29 +28,29 @@ Changelog generator for Ordrestyring
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g os-changelog
-$ os-changelog COMMAND
+$ npm install -g lab-changelog
+$ lab-changelog COMMAND
 running command...
-$ os-changelog (-v|--version|version)
-os-changelog/0.0.0 darwin-x64 node-v14.8.0
-$ os-changelog --help [COMMAND]
+$ lab-changelog (-v|--version|version)
+lab-changelog/0.0.0 darwin-x64 node-v14.8.0
+$ lab-changelog --help [COMMAND]
 USAGE
-  $ os-changelog COMMAND
+  $ lab-changelog COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`os-changelog help [COMMAND]`](#os-changelog-help-command)
-* [`os-changelog mr PROJECT`](#os-changelog-mr-project)
+* [`lab-changelog help [COMMAND]`](#lab-changelog-help-command)
+* [`lab-changelog mr PROJECT`](#lab-changelog-mr-project)
 
-## `os-changelog help [COMMAND]`
+## `lab-changelog help [COMMAND]`
 
-display help for os-changelog
+display help for lab-changelog
 
 ```
 USAGE
-  $ os-changelog help [COMMAND]
+  $ lab-changelog help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
@@ -48,13 +61,13 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src/commands/help.ts)_
 
-## `os-changelog mr PROJECT`
+## `lab-changelog mr PROJECT`
 
 Get a list of merge reuests that have been merges closed since latest release
 
 ```
 USAGE
-  $ os-changelog mr PROJECT
+  $ lab-changelog mr PROJECT
 
 OPTIONS
   -h, --help           show CLI help
@@ -67,5 +80,13 @@ EXAMPLES
   mr api --target dev --output md
 ```
 
-_See code: [src/commands/mr.ts](https://github.com/Projects/os-changelog/blob/v0.0.0/src/commands/mr.ts)_
+_See code: [src/commands/mr.ts](https://github.com/arelstone/gitlab-mr-changelog/blob/v0.0.0/src/commands/mr.ts)_
 <!-- commandsstop -->
+
+
+# Development
+Pull requests is very welcome.
+
+- Clone the repo
+- run npm install
+- To test your commands run `./bin/run`
